@@ -23,8 +23,9 @@ public class ProductService {
         return repo.findById(id).orElse(null);
     }
 
-    public Product save(Product product) {
-        return repo.save(product);
+    public Product create(Product p) {
+        p.setId(null);
+        return repo.save(p);
     }
 
     public Product update(Long id, Product data) {

@@ -1,1 +1,67 @@
+/* Estilos generales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tabla de productos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+button {
+  margin: 0 3px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:nth-child(1) { background-color: #17a2b8; color: white; } /* Ver */
+button:nth-child(2) { background-color: #ffc107; color: black; } /* Editar */
+button:nth-child(3) { background-color: #dc3545; color: white; } /* Eliminar */
+
+button[routerLink] {
+  background-color: #28a745;
+  color: white;
+}
 /* You can add global styles to this file, and also import other style files */

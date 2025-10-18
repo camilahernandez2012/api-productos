@@ -1,9 +1,16 @@
+### 🚫 Archivos y carpetas comunes a excluir
 HELP.md
 target/
+*.log
+*.tmp
+*.bak
+
+### 🚫 Archivos de compilación de Maven
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### 🚫 Carpetas de IDEs (no deben subirse)
 ### STS ###
 .apt_generated
 .classpath
@@ -14,7 +21,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -31,3 +38,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### 🚫 Angular / NodeJS ###
+node_modules/
+dist/
+productos-frontend/
+.angular/
+package-lock.json
+yarn.lock
+
+### 🚫 Sistema ###
+.DS_Store
+Thumbs.db

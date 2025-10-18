@@ -9,7 +9,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/products")
-@CrossOrigin(origins = "http://localhost:4200")
+// Como todo correrá en el mismo dominio en Railway, CORS no es estrictamente necesario,
+// pero lo dejamos abierto por si en el futuro separas dominios:
+@CrossOrigin(origins = "*")
 public class ProductController {
 
     private final ProductService service;
@@ -30,8 +32,9 @@ public class ProductController {
     }
 
     @PostMapping
-    public Product create(@RequestBody Product p) {
-        return service.save(p);
+    public ResponseEntity<Product> create(@RequestBody Product p) {
+        Product saved = service.create(p);
+        return ResponseEntity.ok(saved);
     }
 
     @PutMapping("/{id}")
